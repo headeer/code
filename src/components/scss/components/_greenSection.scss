@@ -1,0 +1,24 @@
+@import "../colors";
+@import "../mixins/index";
+@import "../functions/index";
+@import "../breakpoints";
+@import "../colors";
+
+.green-section {
+  @include flex(column, nowrap, center, center);
+  background: $main-color;
+  h2 span {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    padding: 2% 10%;
+  }
+  p {
+    color: black;
+    margin-bottom: 40px;
+  }
+}

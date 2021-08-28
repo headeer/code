@@ -1,0 +1,41 @@
+@import "../colors";
+@import "../mixins/index";
+@import "../breakpoints";
+
+footer {
+  margin-top: 50px;
+  .footer {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 30% 17.5% 17.5% 17.5% 17.5%;
+  }
+  background: black;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+  }
+  div  h4 {
+    color: $background;
+    margin: 20px 0 5px;
+  }
+  div ul {
+     list-style-type: none;
+
+     li a {
+       color: $grey;
+       text-decoration: none;
+     }
+   }
+  .bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    p {
+      color: $background;
+    }
+  }
+}

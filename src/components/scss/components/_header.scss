@@ -1,0 +1,66 @@
+@import "../mixins/index";
+@import "../functions/index";
+@import "../breakpoints";
+@import "../colors";
+header {
+  @include flex(column, nowrap, flex-start, flex-start);
+  height: 50vw;
+  padding-top: 9vh;
+  display: grid;
+  grid-template-columns: 49% 2% 49%;
+  .divider {
+    background: $grey;
+    height: 100%;
+    position: relative;
+    width: 1px;
+  }
+
+  .title {
+    position: relative;
+    top: 20vw;
+    left: 30px;
+    h1 {
+      font-size: 2vw;
+    }
+  }
+  .image {
+    .absolute {
+      position: absolute;
+      z-index: -1;
+    }
+    .speaker {
+      width: 30%;
+      position: relative;
+      left: 35%;
+      top: 14vw;
+    }
+  }
+
+  @media #{$md} {
+    h1 {
+      line-height: 72px;
+      margin-bottom: 36px;
+    }
+  }
+  @media #{$xl} {
+     p {
+      padding-right: 60%;
+    }
+  }
+  h1 {
+    text-align: left;
+    width: 100%;
+    font-size: 48px;
+    padding-left: 24px;
+    line-height: 52px;
+    font-weight: normal;
+    span {
+      color: $main-color-dark;
+    }
+
+  }
+  button {
+    cursor: pointer;
+    margin-left: 24px;
+  }
+}

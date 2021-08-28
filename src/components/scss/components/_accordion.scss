@@ -1,0 +1,50 @@
+@import "../colors";
+@import "../mixins/index";
+@import "../functions/index";
+@import "../breakpoints";
+@import "../colors";
+
+.accordion {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  padding: 40px 0 0;
+  position: relative;
+  .right-side {
+    .text {
+      .underline {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .collapsed, .expanded {
+
+    animation: 1s all ease-in-out;
+    .images {
+      width: 60%;
+      margin: 0 auto;
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .text, ul {
+      padding: 0 10%;
+    }
+  }
+  h2 span {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    padding: 2% 10%;
+  }
+  p {
+    color: black;
+    margin-bottom: 40px;
+  }
+}

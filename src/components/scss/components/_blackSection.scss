@@ -1,0 +1,59 @@
+@import "../colors";
+@import "../mixins/index";
+@import "../functions/index";
+@import "../breakpoints";
+@import "../colors";
+
+.black-section {
+  @include flex(column, nowrap, center, center);
+  background: $black;
+  color: $background;
+  p, h5,h2{
+    color: $background;
+
+  }
+  h5, h2 {
+    padding: 0 8%;
+    text-align: left;
+  }
+  >.text {
+    width: 100%;
+    padding-left: 24%;
+  }
+  .section-steps {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width:  624px){
+      display: flex;
+      flex-direction: column;
+    }
+    .step {
+      border: 1px solid $grey;
+      @include flex(column, nowrap, center, center);
+      border-bottom: none;
+      color: $background;
+      &:first-child {
+        border-right: none;
+      }
+      &:last-child {
+        border-left: none;
+      }
+      p {
+        padding:0 5%;
+        text-align: center;
+      }
+       .logo {
+         margin: 10% 0 2%;
+       }
+      button {
+        margin: 10% 0 40%;
+        background: transparent;
+        border: 1px solid $background;
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+  }
+
+}

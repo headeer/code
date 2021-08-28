@@ -1,0 +1,58 @@
+@import "../colors";
+@import "../mixins/index";
+@import "../functions/index";
+@import "../breakpoints";
+@import "../colors";
+
+.woman-section {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  .image-container {
+    background: url('../../../assets/images/tlo.png') no-repeat center;
+    background-size: cover;
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: $background;
+      font-size: 32px;
+      text-align: center;
+      padding-top: 70px;
+    }
+  }
+  .title-container {
+    text-align: left;
+    padding: 45% 10% 15%;
+    .section-title {
+      margin-bottom: 100px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .button {
+      margin: 0 15px 0 0;
+      border: 1px solid $black;
+      background: $background;
+      color: $black;
+      text-align: left;
+      padding: 5px 22px;
+    }
+  }
+  h4 {
+    font-size: 80%;
+    color: $grey;
+  }
+  h2 span {
+    display: block;
+    margin: 20px 0;
+  }
+  h2 {
+    font-weight: normal;
+  }
+  p {
+    color: black;
+    margin-bottom: 40px;
+    line-height: 20px;
+  }
+}

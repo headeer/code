@@ -1,0 +1,68 @@
+@import "../colors";
+
+.table-pricing {
+
+  &.MuiPaper-elevation1 {
+    box-shadow: none;
+    background: #F5F5F5;
+    padding: 100px 2%;
+
+  }
+  >.title {
+    padding: 0 1%;
+  }
+  tr {
+    border-bottom: 1px solid
+    rgba(224, 224, 224, 1);
+
+  }
+  .pricing {
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    &.pricing-bottom {
+      p {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+    .button {
+      background: transparent;
+      border: 1px solid  $black;
+      color: $black;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    img {
+      width: 40px;
+    }
+  }
+  .icons {
+    width: 20%;
+    padding: 0 10%;
+    img {
+      width: 20px;
+    }
+  }
+  .popup {
+    width: 20%;
+    img {
+      width: 20px;
+    }
+  }
+  .MuiPopover-paper {
+    background: #4B42AD;
+  }
+  Table {
+    &:last-child {
+
+    margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "../colors";
+@import "../breakpoints";
+@import "../mixins/index";
+
+.how-it-works {
+  position: relative;
+
+  @media #{$sm} {
+
+    h5, h2 {
+      text-align: left;
+    }
+    .small-title {
+      font-family: "Akkurat Mono" , sans-serif;
+      color: $grey;
+    }
+  }
+  @media screen and (max-width:  1200px){
+    .steps-container {
+      padding: 5%;
+    }
+  }
+
+
+  p {
+    color: $text;
+  }
+  @media screen and (max-width:  624px){
+    .text-container {
+
+      padding: 0 5%;
+    }
+  }
+  @media #{$xl} {
+    padding: 200px 64px;
+    &::before {
+      display: none;
+    }
+    .logo-big {
+      position: absolute;
+      top: -90vh;
+      width: 85%;
+    }
+    background: transparent;
+
+    .steps-container {
+      .reversed {
+        .card-section {
+          display: flex;
+          flex-direction: row-reverse;
+
+        }
+
+      }
+      .button {
+        display: block;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+      .card-section {
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        text-align: left;
+        margin: 40px 0;
+        animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
+        position: relative;
+        animation-fill-mode: forwards;
+        animation-duration: 0.7s;
+        animation-delay: 0.1s;
+        .list-icon {
+          padding-right: 10px;
+        }
+        li {
+          font-size: 18px;
+        }
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: left;
+        padding-right: 17%;
+
+        .bold {
+          font-weight: bold;
+        }
+
+        h2, h5 {
+          text-align: left;
+
+        }
+
+        p {
+          margin-left: 28px;
+          font-size: 16px;
+        }
+      }
+
+      .carousel-card {
+
+      }
+    }
+  }
+
+}
+
+video {
+  padding: 5% 5% 0 0;
+  width: 45%;
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    display: block;
+  }
+  @media (max-width: 575px) {
+    width: 90%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+@keyframes fadeInImg {
+from{ opacity:0} to {opacity:1}
+}
